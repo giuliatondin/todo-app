@@ -1,0 +1,234 @@
+* { /* remove default browser style */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #f6f6f6;
+    color: #000;
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+    margin: 0px 10px;
+    padding-top: 20px;
+}
+
+.app {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+}
+
+h1 {
+    margin-bottom: 30px;
+    margin-top: 50px;
+    text-align: center;
+}
+
+.complete-popup {
+    font-size: 25px;
+    text-align: center;
+    color: #000;
+    font-weight: 900;
+    padding: 10px 0px;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-input {
+    display: flex;
+}
+
+form input, form button {
+    padding: 0.5rem;
+    padding-left: 1rem;
+    font-size: 20px;
+    border: none;
+    background: white;
+    border-radius: 20px;
+}
+
+form input {
+    width: 450px;
+    font-family: 'Poppins', sans-serif;
+}
+
+form input::placeholder {
+    color: #bebcbc;
+    font-family: 'Poppins', sans-serif;
+}
+
+form button {
+    color: #fff;
+    background: #f88b6d;
+    cursor: pointer;
+    margin-left: 15px;
+    padding: 5px 20px;
+    transition: all 0.3s ease;
+    font-weight: 600;
+}
+
+form button:hover {
+    background: #000;
+    color: #fff;
+}
+
+.todo-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #F6F6F6;
+}
+
+.todo-list {
+    min-width: 30%;
+    list-style: none;
+}
+
+.todo {
+    margin: 0.8rem 0rem;
+    background: white;
+    color: black;
+    font-size: 1.5rem;
+    transition: all 0.5s ease;
+    border-radius: 15px;
+    padding: 20px;
+    display: flex;
+    width: 800px;
+}
+
+.todo li {
+    flex: 1;
+}
+
+.trash-btn, .complete-btn {
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-size: 1rem;
+    padding: 0px 10px;
+}
+
+.trash-btn {
+    color: #9c9c9c;
+}
+
+.trash-btn:hover {
+    color: red;
+}
+
+.complete-btn {
+    color: yellowgreen;
+}
+
+.complete-btn:hover {
+    color: rgb(108, 150, 26);
+}
+
+.todo-item {
+    padding: 0rem 0.5rem;
+    font-size: 18px;
+    border-left: 3px solid #f88b6d;
+}
+
+.fa-trash, .fa-check {
+    pointer-events: none;
+}
+
+.completed {
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+
+.fall {
+    transform: translateY(8rem) rotateZ(20deg);
+    opacity: 0;
+}
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    border: none; 
+    color: #ff6f47;
+    width: 10rem;
+    cursor: pointer;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 14px;
+}
+
+.select {
+    margin: 1rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.select::after {
+    content: "\25BC";
+    font-size: 12px;
+    position: absolute;
+    background: #ff6f47;
+    top: 0;
+    right: 0;
+    padding: 5px 10px;
+    pointer-events: none;
+    transition: all 0.3s ease;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.select:hover::after {
+    background: #fff;
+    color: #ff6f47;
+}
+
+.progress {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+progress {
+    height: 20px;
+    width: 100%;
+    max-width: 600px;
+    border-radius:50px;
+}
+
+progress::-webkit-progress-bar {
+	height:20px;
+	border-radius: 50px;
+    background-color: #ffdbd1;
+}
+
+progress::-webkit-progress-value {
+	height: 20px;
+	border-radius: 50px;
+    background-color: yellowgreen;
+}
+
+@media screen and (max-width: 992px) {
+    h1 {
+        font-size: 25px;
+    }
+    form input, .todo {
+        width: 100%;
+    }
+    form button {
+        font-size: 15px;
+    }
+    .select {
+        border-radius: 50px;
+    }
+    select {
+        width: 100%;
+    }
+    
+}

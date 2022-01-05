@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo List</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <h1>What's the plan for today?</h1>
+    <div class="app">
+        <form>
+            <div class="form-input">
+                <input type="text" class="todo-input" placeholder="ex.: take the garbage out"/>
+                <button class="todo-button" type="submit">
+                    + add task
+                </button>
+            </div>
+        </form>
+        <div class="progress">
+            <progress class="progress-bar" value="0" max="100"> 32% </progress>
+            <div class="select">
+                <select name="todos" class="filter-todo">
+                <option value="all">All</option>
+                <option value="completed">Completed</option>
+                <option value="uncompleted">Uncompleted</option>
+                </select>
+            </div>
+        </div>
+        <div class="complete-popup">let's work!</div> <!-- well done, nice, yeehaw -->
+        <div class="todo-container">
+            <ul class="todo-list"></ul>                         
+        </div>
+    </div>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
